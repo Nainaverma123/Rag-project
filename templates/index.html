@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RAG Chatbot</title>
+</head>
+<body>
+
+    <h1>RAG Chatbot</h1>
+
+    <form action="/ask" method="post">
+
+        <input
+            type="text"
+            name="question"
+            placeholder="Ask a question"
+            required
+            style="width:400px;"
+        >
+
+        <button type="submit">
+            Ask
+        </button>
+
+    </form>
+
+    {% if question %}
+        <h3>Question:</h3>
+        <p>{{ question }}</p>
+
+        <h3>Answer:</h3>
+        <p>{{ answer }}</p>
+    {% endif %}
+
+</body>
+</html>
